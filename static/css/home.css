@@ -1,0 +1,16 @@
+h1{
+    font-weight: bolder !important;
+}
+#nk{
+    font-weight: bolder;
+}
+#grey{
+    color: grey;
+}
+.icons{
+    position: absolute;
+    bottom: 0;
+}
+.iconp{
+    position: relative;
+}
