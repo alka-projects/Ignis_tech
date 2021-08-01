@@ -11,12 +11,13 @@ def home(request):
         form= eventForm(request.POST,request.FILES)
         if form.is_valid(): 
             form.save()
+            return redirect('/')
     return render(request,'Ignis_app/home.html',{'form':form,'event_list':event_list})
 
 def add_like(request,id):
     event_list=event.objects.all().filter(id=id).update(is_liked=True)
     return redirect('/')
-    
+
 def remove_like(request,id):
     event_list=event.objects.all().filter(id=id).update(is_liked=False)
     return redirect('/')
